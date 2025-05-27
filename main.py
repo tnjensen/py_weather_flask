@@ -11,7 +11,7 @@ def index():
 
 @app.route("/weather")
 def get_weather():
-    city = request.args.get("city").lstrip().rstrip() #Gets the city from the query string and removes leading and trailing spaces
+    city = request.args.get("city") #Gets the city from the query string and removes leading and trailing spaces
     weather_data = get_current_weather(city)
     #City not found by API
     if weather_data["cod"] != 200:
