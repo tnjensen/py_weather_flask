@@ -4,8 +4,8 @@ from waitress import serve
 
 app = Flask(__name__) #Creates a flask app
 
-@app.route("/") #Defines the route for the home page
-@app.route("/index")
+""" @app.route("/") """ #Defines the route for the home page
+@app.route("/")
 def index():
     return render_template("index.html")
 
