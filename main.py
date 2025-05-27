@@ -12,7 +12,7 @@ def index():
 @app.route("/weather")
 def get_weather():
     city = request.args.get("city")
-    if not bool(city.strip()):
+    if not bool(city).strip():
         city = "Trondheim"
     weather_data = get_current_weather(city)
     #City not found by API
