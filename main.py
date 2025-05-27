@@ -14,12 +14,12 @@ def weather():
     city = request.args.get("city") #Gets the city from the query string and removes leading and trailing spaces
     weather_data = get_current_weather(city)
     #City not found by API
-    if weather_data["cod"] != 200:
+    """ if weather_data["cod"] != 200:
         return render_template(
             "./not_found.html", 
-        )
+        ) """
     return render_template(
-        ",/weather.html", 
+        "./weather.html", 
         title=weather_data["name"],
         status=weather_data["weather"][0]["description"].capitalize(),
         temp=f"{weather_data["main"]["temp"]:.1f}",
