@@ -29,5 +29,5 @@ def get_weather():
 
 if __name__ == "__main__":
     #app.run(host="0.0.0.0", port=8000) #Runs the app on port 8000 in Dev mode
-    """ serve(app, host="0.0.0.0", port=8000) """
-    app.run(debug=True)
+    serve(app, host="0.0.0.0", port=8000)
+    """ app.run(debug=True) """
